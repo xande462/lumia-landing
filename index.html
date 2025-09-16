@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LUMIA – Estética & Beleza</title>
+  <meta name="description" content="Agendamentos inteligentes para profissionais e clientes de beleza.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="https://fav.farm/✨">
+</head>
+<body class="bg-slate-950 text-slate-100">
+  <!-- NAV -->
+  <header class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+    <div class="flex items-center gap-2">
+      <span class="text-2xl">✨</span>
+      <strong class="text-xl tracking-wide">LUMIA</strong>
+    </div>
+    <a href="#cta" class="px-4 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-500">Quero testar</a>
+  </header>
+
+  <!-- HERO -->
+  <section class="max-w-6xl mx-auto px-4 pt-10 pb-14">
+    <div class="grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
+          Agendamentos que <span class="text-indigo-400">trabalham por você</span>
+        </h1>
+        <p class="mt-4 text-slate-300">
+          Agenda inteligente, pagamentos com split, RCOIN de reputação e IA para atender seus clientes 24/7.
+        </p>
+        <div class="mt-6 flex gap-3">
+          <a href="#cta" class="px-5 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500">Começar agora</a>
+          <a href="#features" class="px-5 py-3 rounded-xl border border-slate-700">Ver recursos</a>
+        </div>
+      </div>
+      <div class="rounded-2xl bg-gradient-to-br from-indigo-600/20 to-cyan-500/10 p-1">
+        <div class="rounded-2xl bg-slate-900 p-6">
+          <div class="aspect-[9/16] rounded-xl bg-slate-800 flex items-center justify-center text-slate-400">
+            (coloque aqui um print do app depois)
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features" class="max-w-6xl mx-auto px-4 pb-16">
+    <h2 class="text-3xl font-bold mb-6">Por que o LUMIA?</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800">
+        <h3 class="font-semibold mb-2">Agenda inteligente</h3>
+        <p class="text-slate-300">Lista de interesse, encaixes, bloqueio de no-show e horários passados.</p>
+      </div>
+      <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800">
+        <h3 class="font-semibold mb-2">Pagamentos com split</h3>
+        <p class="text-slate-300">Dinheiro direto para o profissional; comissão do app automática.</p>
+      </div>
+      <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800">
+        <h3 class="font-semibold mb-2">RCOIN + Ranking</h3>
+        <p class="text-slate-300">Reputação transparente, benefícios e Top 10 com premiação.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- NO PLANS / COMMISSION MODEL -->
+  <section class="max-w-6xl mx-auto px-4 pb-16">
+    <h2 class="text-3xl font-bold mb-2">Sem mensalidade. Comissão justa.</h2>
+    <p class="text-slate-300 mb-8">No LUMIA você só paga quando vende. Transparente, automático e direto no split.</p>
+
+    <div class="grid md:grid-cols-3 gap-6 mb-10">
+      <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800">
+        <div class="text-indigo-400 text-2xl mb-2">✔</div>
+        <h3 class="font-semibold mb-1">Só paga no sucesso</h3>
+        <p class="text-slate-300">Sem planos, sem mensalidade. A taxa é aplicada somente em serviços concluídos.</p>
+      </div>
+      <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800">
+        <div class="text-indigo-400 text-2xl mb-2">⚡</div>
+        <h3 class="font-semibold mb-1">Split automático</h3>
+        <p class="text-slate-300">Você recebe na hora e o LUMIA retém a comissão automaticamente.</p>
+      </div>
+      <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800">
+        <div class="text-indigo-400 text-2xl mb-2">🔍</div>
+        <h3 class="font-semibold mb-1">Transparência total</h3>
+        <p class="text-slate-300">Detalhes claros por agendamento e relatórios mensais para conferência.</p>
+      </div>
+    </div>
+
+    <!-- CALCULADORA -->
+    <div class="rounded-2xl bg-slate-900/60 border border-slate-800 p-6">
+      <h3 class="text-xl font-semibold">Simule sua comissão</h3>
+      <p class="text-slate-300 text-sm mt-1">Veja quanto você recebe em um serviço com a comissão configurada.</p>
+
+      <div class="grid md:grid-cols-2 gap-6 mt-6">
+        <div>
+          <label class="block text-sm text-slate-300 mb-2">Preço do serviço (R$)</label>
+          <input id="price" type="number" step="0.01" value="100"
+                 class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 focus:outline-none">
+        </div>
+        <div>
+          <label class="block text-sm text-slate-300 mb-2">Comissão do LUMIA (<span id="pctValue">10%</span>)</label>
+          <input id="pct" type="range" min="5" max="20" step="1" value="10" class="w-full">
+          <div class="text-xs text-slate-400 mt-1">Ajuste entre 5% e 20% conforme sua negociação/vertical.</div>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6 mt-6">
+        <div class="p-4 rounded-xl bg-slate-950 border border-slate-800">
+          <div class="text-slate-400 text-sm">Profissional recebe</div>
+          <div id="profRecebe" class="text-2xl font-extrabold mt-1">R$ 90,00</div>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-950 border border-slate-800">
+          <div class="text-slate-400 text-sm">Comissão LUMIA</div>
+          <div id="appRecebe" class="text-2xl font-extrabold mt-1">R$ 10,00</div>
+        </div>
+      </div>
+
+      <p class="text-xs text-slate-500 mt-4">
+        Observação: taxas do provedor de pagamento (se houver) podem ser aplicadas à parte.
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta" class="max-w-3xl mx-auto px-4 pb-20 text-center">
+    <h2 class="text-3xl font-bold">Entre para a lista de pré-lançamento</h2>
+    <p class="text-slate-300 mt-2">Receba novidades e convite para o MVP.</p>
+    <form class="mt-6 grid sm:grid-cols-[1fr_auto] gap-3"
+          action="https://formspree.io/f/xeqypqpl" method="POST">
+      <input required name="email" type="email" placeholder="Seu e-mail"
+             class="px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 focus:outline-none">
+      <button class="px-5 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500">Quero participar</button>
+    </form>
+    <p class="text-xs text-slate-500 mt-3">Sem spam. Cancelamento a qualquer momento.</p>
+  </section>
+
+  <footer class="py-10 text-center text-slate-400 bg-slate-900/50">
+    © <span id="y"></span> LUMIA Tech Company — LUMIA Estética & Beleza
+  </footer>
+
+  <script>
+    const priceInput = document.getElementById('price');
+    const pctRange   = document.getElementById('pct');
+    const pctValue   = document.getElementById('pctValue');
+    const profOut    = document.getElementById('profRecebe');
+    const appOut     = document.getElementById('appRecebe');
+
+    function brl(n){ return n.toLocaleString('pt-BR',{style:'currency',currency:'BRL'}); }
+    function calc(){
+      const price = parseFloat((priceInput.value || '0').replace(',', '.')) || 0;
+      const pct   = parseInt(pctRange.value, 10) || 0;
+      pctValue.textContent = pct + '%';
+      const app = price * pct / 100;
+      const pro = Math.max(0, price - app);
+      profOut.textContent = brl(pro);
+      appOut.textContent  = brl(app);
+    }
+    priceInput.addEventListener('input', calc);
+    pctRange.addEventListener('input', calc);
+    calc();
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
