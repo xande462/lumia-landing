@@ -33,13 +33,25 @@
           <a href="#features" class="px-5 py-3 rounded-xl border border-slate-700">Ver recursos</a>
         </div>
       </div>
+
+      <!-- CARD COM O PRINT -->
       <div class="rounded-2xl bg-gradient-to-br from-indigo-600/20 to-cyan-500/10 p-1">
         <div class="rounded-2xl bg-slate-900 p-6">
-          <div class="aspect-[9/16] rounded-xl bg-slate-800 flex items-center justify-center text-slate-400">
-            (coloque aqui um print do app depois)
+          <div class="aspect-[9/16] rounded-xl overflow-hidden bg-slate-800">
+            <picture>
+              <!-- opcional: exporte também em webp para ficar mais leve -->
+              <source srcset="assets/img/app-preview.webp?v=1" type="image/webp">
+              <img
+                src="assets/img/app-preview.png?v=1"
+                alt="Preview do app LUMIA"
+                loading="lazy"
+                class="w-full h-full object-cover"
+              >
+            </picture>
           </div>
         </div>
       </div>
+      <!-- /CARD -->
     </div>
   </section>
 
