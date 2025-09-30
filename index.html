@@ -39,8 +39,11 @@
         <div class="rounded-2xl bg-slate-900 p-6">
           <div class="aspect-[9/16] rounded-xl overflow-hidden bg-slate-800">
             <picture>
-              <!-- opcional: exporte também em webp para ficar mais leve -->
+              <!-- Mobile primeiro (até 768px) -->
+              <source srcset="assets/img/app-preview-mobile.webp?v=1" media="(max-width: 768px)" type="image/webp">
+              <!-- Desktop -->
               <source srcset="assets/img/app-preview.webp?v=1" type="image/webp">
+              <!-- Fallback PNG (opcional) -->
               <img
                 src="assets/img/app-preview.png?v=1"
                 alt="Preview do app LUMIA"
